@@ -36,11 +36,20 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+        // validate name="title", name="body", neu dung thi tra ve 123;
+        // sai thi bao loi
         $this->validate($request,[
             'title'=>'required',
             'body'=>'required'
         ]);
-        return 123;
+        // return 123;
+        // create post
+        $post = new Post; // tao 1 truong moi trong model Post
+        $post->title = $request->input('title');
+        $post->body = $request->input('body');
+        $post->save();
+
+        return redirect('/posts')->with('success', 'Post Created');
     }
 
     /**
