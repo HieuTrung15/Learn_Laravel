@@ -7,4 +7,9 @@
     <br>
     <br>
     <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a>
+
+    <form action=" {{url('destroy', $post->id)}} " method="post" class="pull-right">
+        @csrf
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
 @endsection
