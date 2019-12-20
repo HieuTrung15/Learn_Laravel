@@ -22,3 +22,5 @@ Route::get('/posts', 'PostsController@index');
 Route::get('/posts/{id}', 'PostsController@show');
 Route::get('/create', 'PostsController@create');
 Route::post('/store', 'PostsController@store');
+Route::get('/posts/{id}/edit', 'PostsController@edit');
+Route::post('/update/{id}', 'PostsController@update')->name('toUpdate');
