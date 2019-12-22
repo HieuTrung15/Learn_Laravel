@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.index');
 });
 Route::get('/index', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
@@ -28,4 +28,4 @@ Route::post('/destroy/{id}', 'PostsController@destroy');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'DashboardController@index');
