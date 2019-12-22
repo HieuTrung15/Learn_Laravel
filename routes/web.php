@@ -25,3 +25,7 @@ Route::post('/store', 'PostsController@store');
 Route::get('/posts/{id}/edit', 'PostsController@edit');
 Route::post('/update/{id}', 'PostsController@update')->name('toUpdate');
 Route::post('/destroy/{id}', 'PostsController@destroy');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
