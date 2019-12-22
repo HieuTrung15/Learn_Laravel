@@ -1,4 +1,4 @@
-
+{{-- @include('inc.messages') --}}
   <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/index') }}">
@@ -29,9 +29,7 @@
                 </li>
             </ul>
 
-            <ul class="navbar-nav mr-auto navbar-right">
-                <li><a href="/create">Create Post</a></li>
-            </ul>
+
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->
@@ -51,6 +49,7 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/dashboard ">Dashboard</a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">

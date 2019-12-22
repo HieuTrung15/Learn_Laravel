@@ -13,8 +13,10 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    <h2>Create your post</h2>
+                    <ul class="navbar-nav mr-auto navbar-right">
+                        <li><a href="/create">Create Post</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
