@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container">
     <a href="/posts" class="btn btn-success">Back</a>
     <h1>{{$post->title}}</h1>
     <h4>{{$post->body}}</h4>
@@ -12,4 +13,5 @@
         @csrf
         <button type="submit" class="btn btn-danger">Delete</button>
     </form>
+</div>
 @endsection

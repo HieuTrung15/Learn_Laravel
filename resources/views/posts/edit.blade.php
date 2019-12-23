@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Edit Post</h1>
+
     {{-- validate form laravel 6.0 --}}
     {{-- name: ten input trong function store Postscontroller --}}
     {{-- dung route --}}
+<div class="container">
+    <h1>Edit Post</h1>
     <form action=" {{route('toUpdate',$post->id)}} " method="post">
         @csrf
         <div class="form-group">
@@ -18,6 +20,6 @@
             <button type="submit">Submit</button>
         </div>
     </form>
-
+</div>
 
 @endsection

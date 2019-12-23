@@ -17,6 +17,21 @@
                     <ul class="navbar-nav mr-auto navbar-right">
                         <li><a href="/create">Create Post</a></li>
                     </ul>
+
+                        <table class="table table-striped">
+                            <tr>
+                                <td>Title</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            @foreach($posts as $post)
+                                <tr>
+                                    <th> {{$post->title}} </th>
+                                    <th><a href="posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a></th>
+                                </tr>
+                            @endforeach
+                        </table>
+
                 </div>
             </div>
         </div>
