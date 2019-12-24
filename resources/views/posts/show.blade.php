@@ -7,11 +7,15 @@
     <h4>{{$post->body}}</h4>
     <br>
     <br>
-    <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a>
+    @if(!Auth::guest())
+        @if(Auth::user()->id == $post->user_id)
+            <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a>
 
-    <form action=" {{url('destroy', $post->id)}} " method="post" class="pull-right">
-        @csrf
-        <button type="submit" class="btn btn-danger">Delete</button>
-    </form>
+            <form action=" {{url('destroy', $post->id)}} " method="post" class="pull-right">
+                @csrf
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+        @endif
+    @endif
 </div>
 @endsection
